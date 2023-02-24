@@ -9,23 +9,28 @@ public class SnakeAndLadder {
 
     public static void main(String[] args) {
 
-        int dice = (int) (Math.random()*10)%6+1;
-        int option = (int)(Math.random()*10)%3;
+            int dice = (int) (Math.random() * 10) % 6+1;
+            int option = (int) (Math.random() * 10) % 3;
 
-        if(option == LADDER){
-            System.out.println("Ladder");
-            position+=dice;
+            if (option == LADDER) {
+                System.out.println("ladder");
+                position +=dice;
 
+            } else if (option == SNAKE) {
+                System.out.println("snake");
+                position -=dice;
+            }
+            else  if (option == NO_PLAY){
+                System.out.println("N0 play");
+                position = PLAYER_POSITION;
+            }
+
+            if(position<PLAYER_POSITION){
+                position = 0;
+            }
+
+            System.out.println("position: " + position);
         }
-        else if(option == SNAKE){
-            System.out.println("snake");
-            position-=dice;
 
-
-        }
-        else if (option == NO_PLAY) {
-            System.out.println("No Play ");
-        }
     }
-}
 
