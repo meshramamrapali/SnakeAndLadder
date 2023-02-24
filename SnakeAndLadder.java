@@ -6,6 +6,7 @@ public class SnakeAndLadder {
     static final int LADDER = 1;
     static final int SNAKE = 2;
     static int position = 0;
+    static int dice = 0;
 
     public static void main(String[] args) {
 
@@ -20,8 +21,6 @@ public class SnakeAndLadder {
             } else if (option == SNAKE) {
                 System.out.println("snake");
                 position -= dice;
-
-
             } else if (option == NO_PLAY) {
                 System.out.println("N0 play");
                 position = position;
@@ -35,5 +34,7 @@ public class SnakeAndLadder {
 
             System.out.println("position: " + position);
         }
+        System.out.println(" number of time dice roll: " + dice);
     }
 }
+
